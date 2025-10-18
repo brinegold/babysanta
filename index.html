@@ -72,7 +72,7 @@
     /* Tokenomics layout */
     .token-card{ display:grid; grid-template-columns: 1.25fr 0.75fr; gap:16px; max-width:920px; margin:0 auto; align-items:center; }
     .facts{ list-style:none; padding:0; margin:12px 0 0; display:grid; gap:10px; }
-    .facts li{ background:#F5C76B; padding:9px 12px; font-weight:800; }
+    .facts li{ background:#F5C76B; padding:9px 12px; font-weight:800; overflow-wrap: break-word; word-wrap: break-word; }
     .facts li span{ display:inline-block; min-width:92px; }
     .token-right{ display:flex; align-items:center; justify-content:center; }
     .coin{ width: 240px; height:auto; display:block; margin-top:14px; border-radius: 50%; }
@@ -112,6 +112,53 @@
 
     @media (min-width: 901px){
       .token-card{ grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Enhanced Mobile Responsiveness */
+    @media (max-width: 600px){
+      .hero{ padding: 8px 12px 20px; }
+      .brand{ margin: 12px 0 6px; }
+      .hero-illustration{ margin: 4px auto 12px; }
+      
+      .contract{ flex-direction: column; align-items: stretch; gap: 8px; padding: 12px; }
+      .contract .label{ text-align: center; }
+      .contract .hash{ text-align: center; font-size: 13px; }
+      .contract .copy{ margin-left: 0; width: 100%; text-align: center; padding: 8px 12px; }
+      
+      .socials{ gap: 14px; flex-wrap: wrap; justify-content: center; }
+      .socials a{ width: 42px; height: 42px; font-size: 20px; }
+      
+      .hero-cta{ width: 100%; padding: 0 12px; }
+      .btn.buy{ width: 100%; text-align: center; padding: 12px 20px; font-size: 16px; }
+      
+      .section{ padding: 6px 12px 20px; }
+      .section h2{ font-size: 24px; margin: 10px 0 10px; }
+      
+      .card{ padding: 14px; border-radius: 18px; overflow: hidden; }
+      .about-card h3{ font-size: 1.5rem !important; margin-bottom: 15px !important; }
+      .poem{ font-size: 16px; line-height: 1.5; word-wrap: break-word; overflow-wrap: break-word; }
+      
+      .facts li{ padding: 8px 10px; font-size: 14px; word-break: break-all; }
+      .facts li span{ min-width: 80px; display: block; word-break: normal; }
+      
+      .footer{ flex-direction: column; gap: 10px; padding: 18px 12px 8px; }
+      .footer .btn{ width: 100%; text-align: center; margin: 0 !important; padding: 12px 16px; }
+      
+      .legalbar{ padding: 8px 12px 24px; }
+      .legal-box{ font-size: 11px; text-align: center; padding: 6px 10px; }
+      
+      .token-card{ gap: 12px; }
+      .coin{ margin-top: 4px; }
+    }
+
+    @media (max-width: 400px){
+      .brand{ font-size: 40px; }
+      .hero-illustration{ width: 180px; }
+      .contract .hash{ font-size: 12px; }
+      .poem{ font-size: 15px; }
+      .section h2{ font-size: 22px; }
+      .about-card h3{ font-size: 1.3rem !important; }
+      .socials a{ width: 38px; height: 38px; font-size: 18px; }
     }
   </style>
 
