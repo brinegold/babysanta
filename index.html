@@ -3,23 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Desertdoge Coin - $DDOGE</title>
+  <title>BabySanta Coin - $BABYSANTA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;800&family=Nunito:wght@400;700;900&family=Kalam:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="icon" href="logo.jpg">
-  <meta property="og:title" content="Desertdoge Coin - $DDOGE">
-  <meta property="og:description" content="Desert Doge - Guardian of the Desert Realm">
+  <meta property="og:title" content="BabySanta Coin - $BABYSANTA">
+  <meta property="og:description" content="BabySanta - Festive Memecoin of the Winter Realm">
   <meta property="og:image" content="logo.jpg">
 
   <style>
     :root{
-      --bg: #EDAB17;
-      --ink: #111111;
-      --panel: #8B4F09;
-      --card: #7B3F07;
-      --pill: #F2B24E;
-      --accent: #FFCE6A;
+      --bg: #FDE3E2;
+      --ink: #0D1B2A;
+      --panel: #B71C1C; /* Santa red */
+      --card: #C62828;  /* Card red */
+      --pill: #FFFFFF;  /* Snow white */
+      --accent: #2E7D32; /* Pine green */
       --edge: #000000;
       --radius: 18px;
       --radius-lg: 22px;
@@ -35,20 +35,20 @@
     .btn, .contract, .card, .facts li, .legal-box{
       border: var(--border) solid var(--edge);
       border-radius: var(--radius);
-      background: #FBD06E;
-      box-shadow: 0 6px 0 var(--edge), inset 0 -2px 0 rgba(0,0,0,.12);
+      background: var(--pill);
+      box-shadow: 0 6px 0 var(--edge), inset 0 -2px 0 rgba(0,0,0,.08);
     }
 
-    .btn{ display:inline-block; background:#F7C54F; padding:10px 16px; border-radius:999px; font-weight:800; text-decoration:none; color:var(--ink); font-family: var(--font-display); transition: transform .06s ease; }
-    .btn:hover{ transform: translateY(-1px);} .btn:active{ transform: translateY(1px);} .btn.buy{ background:#FFE07A; } .btn.primary{ background:#ffd05c; margin-right:10px;} .btn.outline{ background:#FBF0C7; }
+    .btn{ display:inline-block; background:#FFFFFF; padding:10px 16px; border-radius:999px; font-weight:800; text-decoration:none; color:var(--ink); font-family: var(--font-display); transition: transform .06s ease; }
+    .btn:hover{ transform: translateY(-1px);} .btn:active{ transform: translateY(1px);} .btn.buy{ background:#C62828; color:#FFFFFF; } .btn.primary{ background:#2E7D32; color:#FFFFFF; margin-right:10px;} .btn.outline{ background:#FFFFFF; }
 
     .hero{ display:flex; flex-direction:column; align-items:center; padding: 10px 18px 24px; }
     .brand{ margin:16px 0 8px; font-family: var(--font-hand); font-weight:700; font-size:62px; line-height:1; letter-spacing:.5px;
-      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; color:#FFE8A9;
+      text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; color:#FFFFFF;
     }
-    .hero-illustration{ width:260px; max-width:70vw; margin:6px auto 14px; border-radius: 50%; }
+    .hero-illustration{ width:260px; max-width:70vw; margin:6px auto 14px; border-radius: 50%; box-shadow: 0 6px 0 var(--edge); }
 
-    .contract{ display:flex; align-items:center; gap:10px; padding:10px 12px; background:#EFB14E; border-radius:999px; max-width:860px; }
+    .contract{ display:flex; align-items:center; gap:10px; padding:10px 12px; background:#FFFFFF; border-radius:999px; max-width:860px; }
     .contract.small{ padding:10px 14px; }
 
     .contract .label{ font-weight:900; font-family: var(--font-display); }
@@ -63,23 +63,23 @@
 
     .section{ padding:8px 18px 26px; }
     .section h2{ text-align:center; margin:14px 0 12px; font-family: var(--font-display); font-size:28px;
-      text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; color:#FFE8A9; }
-    .card{ background:#9E5F16; border-radius:22px; padding:18px; position:relative; }
+      text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; color:#FFFFFF; }
+    .card{ background:#C62828; border-radius:22px; padding:18px; position:relative; }
     .about-card{ max-width:920px; margin:0 auto; }
-    .poem{ color:#fff4e6; font-weight:800; font-size:20px; text-align:center; line-height:1.4;
+    .poem{ color:#f8fbff; font-weight:800; font-size:20px; text-align:center; line-height:1.4;
       text-shadow:-1px -1px 0 #000,1px -1px 0 #000,-1px 1px 0 #000,1px 1px 0 #000; font-family: var(--font-display); }
 
     /* Tokenomics layout */
     .token-card{ display:grid; grid-template-columns: 1.25fr 0.75fr; gap:16px; max-width:920px; margin:0 auto; align-items:center; }
     .facts{ list-style:none; padding:0; margin:12px 0 0; display:grid; gap:10px; }
-    .facts li{ background:#F5C76B; padding:9px 12px; font-weight:800; overflow-wrap: break-word; word-wrap: break-word; }
+    .facts li{ background:#FFFFFF; padding:9px 12px; font-weight:800; overflow-wrap: break-word; word-wrap: break-word; }
     .facts li span{ display:inline-block; min-width:92px; }
     .token-right{ display:flex; align-items:center; justify-content:center; }
     .coin{ width: 240px; height:auto; display:block; margin-top:14px; border-radius: 50%; }
 
     .footer{ display:flex; justify-content:center; gap:12px; padding:22px 18px 10px; }
     .legalbar{ display:flex; justify-content:center; padding: 10px 12px 28px; }
-    .legal-box{ background:#FBF0C7; padding: 8px 14px; font-weight:800; font-family: var(--font-display); font-size:13px; letter-spacing:.3px; }
+    .legal-box{ background:#EAF4FF; padding: 8px 14px; font-weight:800; font-family: var(--font-display); font-size:13px; letter-spacing:.3px; }
 
     /* Handwritten headings */
     #about h2, #tokenomics h2{
@@ -162,6 +162,20 @@
     }
   </style>
 
+  <style>
+    /* Winter effects */
+    #snow-layer{ position: fixed; top:0; left:0; width:100vw; height:100vh; pointer-events: none; z-index: 9999; overflow: hidden; transform: translateZ(0); }
+    .flake-wrap{ position: fixed; top: -10%; will-change: top; }
+    .flake{ position: absolute; width: 18px; height: 18px; opacity: .9; will-change: transform; }
+    @keyframes fall{ from{ top: -10% } to{ top: 110% } }
+    @keyframes drift{ from{ transform: translateX(0) } to{ transform: translateX(30px) } }
+
+    /* Decorative images on cards */
+    .card .decor{ position:absolute; width:56px; height:auto; z-index: 5; filter: drop-shadow(0 2px 0 var(--edge)); }
+    .card .decor.top-left{ top:-18px; left:-10px; }
+    .card .decor.bottom-right{ bottom:-14px; right:-10px; }
+  </style>
+
   <style id="heading-font-fix">
     #about h2, #tokenomics h2{
       font-family: 'Kalam', 'Baloo 2', cursive, system-ui, sans-serif !important;
@@ -172,8 +186,8 @@
 </head>
 <body>
   <main class="hero">
-    <h1 class="brand">$Ddoge</h1>
-    <img class="hero-illustration" src="logo.jpg" alt="Desertdoge" />
+    <h1 class="brand">BabySanta</h1>
+    <img class="hero-illustration" src="logo.jpg" alt="BabySanta" />
     <div class="contract" id="contractBox">
       <span class="label">Ca:</span>
       <span class="hash" id="contractText"> AWrorEFvmBFPGW16KNYpAo5MHFMZw7zrUG6LKCCp2tsx</span>
@@ -185,36 +199,38 @@
       <a href="https://www.dextools.io/app/en/solana/pair-explorer/5kgfdkgiPB3AuE3peMrsiwGQzLRu9n7xHU1p9ER8rSuH?t=1760807469174" aria-label="Chart" target="_blank" rel="noopener">📊</a>
     </nav>
     <div class="hero-cta">
-      <a class="btn buy" href="https://raydium.io/swap/?inputMint=sol&outputMint=AWrorEFvmBFPGW16KNYpAo5MHFMZw7zrUG6LKCCp2tsx" target="_blank" rel="noopener">Buy Now</a>
+      <a class="btn buy" href="https://raydium.io/swap/?inputMint=sol&outputMint=AWrorEFvmBFPGW16KNYpAo5MHFMZw7zrUG6LKCCp2tsx" target="_blank" rel="noopener">Buy BabySanta</a>
     </div>
   </main>
 
   <section id="about" class="section">
-    <h2>$Ddoge</h2>
+    <h2>BabySanta</h2>
     <div class="card about-card">
-      <h3 style="color: #FFE8A9; font-family: var(--font-hand); font-size: 2rem; margin-bottom: 20px; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Desertdoge Coin, The Hamster Killer</h3>
+      <h3 style="color: #FFFFFF; font-family: var(--font-hand); font-size: 2rem; margin-bottom: 20px; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">BabySanta Coin — The Festive Memecoin</h3>
       <p class="poem">
-        🌐 The First Memecoin Coin created on the Solana block chain that represents the ''Doge'' for People in the Middle East and People around the World who love the Middle east and its Flamboyant culture. It's an open-source, peer-to-peer digital currency that uses blockchain technology also inspired by the "dogecoin".
-Ddoge is the governance token of Desert doge Coin, with a total issuance of only 25,000,000(25million) It is intended to create a high-priced coin to attract popularity!.
+        🎄 A joyful, community-driven memecoin on Solana bringing winter cheer, gifts, and fun. Open-source, fast, and merry.
+BabySanta is the governance token of BabySanta Coin with a total supply of 25,000,000.
       </p>
       <br/>
       <div style="border: 2px solid #FFE8A9; border-radius: 20px; padding: 20px; background: rgba(0,0,0,0.2);">
         <p class="poem">
 
- <strong>Name :</strong>  Desertdoge Coin</br>
+ <strong>Name :</strong>  BabySanta Coin</br>
 
- <strong>Symbol :</strong>  Ddoge</br>
+ <strong>Symbol :</strong>  BABYSANTA</br>
 
-<strong>Total Supply :</strong>  25.000.0000</br>
+<strong>Total Supply :</strong>  25,000,000</br>
 
 <strong>Address :</strong>   AWrorEFvmBFPGW16KNYpAo5MHFMZw7zrUG6LKCCp2tsx</br>
 
 <strong>Tax :</strong>   0</br>
-No Taxes Forever,</br>
-No None Sense,</br>
-LP Tokens Burned & Contract Ownership Renounced</br>
+    No Taxes Forever,</br>
+    No None Sense,</br>
+    LP Tokens Burned & Contract Ownership Renounced</br>
         </p>
       </div>
+      <img class="decor top-left" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f384.svg" alt="Christmas tree" />
+      <img class="decor bottom-right" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/26c4.svg" alt="Snowman" />
     </div>
   </section>
 
@@ -230,16 +246,16 @@ LP Tokens Burned & Contract Ownership Renounced</br>
 
 √ Social media sites (twitter, telegram, etc.) launched</br>
 
-√ Ddoge listed on Radium</br>
+√ BabySanta listed on Raydium</br>
 
-√ Second Ddoge marketing campaign</br>
+√ Second BabySanta marketing campaign</br>
 
 <strong style="font-size: 1.5em; color: black;">Phase 2- November 2025</strong></br>
 
-√ Ddoge Listed on Mexc, binance, huobi and coinbase exchanges.</br>
+√ BabySanta Listed on Mexc, binance, huobi and coinbase exchanges.</br>
 
 <strong style="font-size: 1.5em; color: black;">Phase 3 - March 2026</strong></br>
-> Desertdoge Coin platform launched</br>
+> BabySanta Coin platform launched</br>
 > Launch swap platform and staking program </br>
 >
 
@@ -248,6 +264,8 @@ LP Tokens Burned & Contract Ownership Renounced</br>
 > Launch of mobile apps and DEFI wallet</br>
 > More functions, more activities in planning</br>
       </p>
+      <img class="decor top-left" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f384.svg" alt="Christmas tree" />
+      <img class="decor bottom-right" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/26c4.svg" alt="Snowman" />
     </div>
   </section>
 
@@ -255,10 +273,10 @@ LP Tokens Burned & Contract Ownership Renounced</br>
     <h2>Tokenomics</h2>
     <div class="card token-card">
       <div class="token-left">
-        <img src="5.jpg" alt="Desertdoge Character" style="width: 100%; border-radius: 15px; margin-bottom: 20px;">
+        <img src="5.jpg" alt="BabySanta Character" style="width: 100%; border-radius: 15px; margin-bottom: 20px;">
         <ul class="facts">
-          <li><span>Name:</span> Desertdoge Coin</li>
-          <li><span>Symbol:</span> $DDOGE</li>
+          <li><span>Name:</span> BabySanta Coin</li>
+          <li><span>Symbol:</span> $BABYSANTA</li>
           <li><span>Total Supply:</span> 25,000,000</li>
           <li><span>Address:</span> AWrorEFvmBFPGW16KNYpAo5MHFMZw7zrUG6LKCCp2tsx</li>
           <li><span>Tax:</span> 0/0%</li>
@@ -271,15 +289,17 @@ LP Tokens Burned & Contract Ownership Renounced</br>
         </p>
       </div>
       <div class="token-right">
-        <img class="coin" src="logo.jpg" alt="Desertdoge Token" />
+        <img class="coin" src="logo.jpg" alt="BabySanta Token" />
       </div>
+      <img class="decor top-left" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f384.svg" alt="Christmas tree" />
+      <img class="decor bottom-right" src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/26c4.svg" alt="Snowman" />
     </div>
   </section>
 
   <section class="section" style="text-align: center;">
-    <h2>$Ddoge</h2>
+    <h2>BabySanta</h2>
     <div style="margin: 30px 0;">
-      <a class="btn buy" href="https://raydium.io/swap/?inputMint=sol&outputMint=AWrorEFvmBFPGW16KNYpAo5MHFMZw7zrUG6LKCCp2tsx" style="font-size: 20px; padding: 15px 40px;">BUY NOW</a>
+      <a class="btn buy" href="https://raydium.io/swap/?inputMint=sol&outputMint=AWrorEFvmBFPGW16KNYpAo5MHFMZw7zrUG6LKCCp2tsx" style="font-size: 20px; padding: 15px 40px;">BUY BABYSANTA</a>
     </div>
   </section>
 
@@ -290,9 +310,10 @@ LP Tokens Burned & Contract Ownership Renounced</br>
   </footer>
 
   <footer class="legalbar">
-    <div class="legal-box">Desert Doge Coin - Copyright © 2025 All rights reserved</div>
+    <div class="legal-box">BabySanta Coin - Copyright © 2025 All rights reserved</div>
   </footer>
 
+  <div id="snow-layer" aria-hidden="true"></div>
   <script>
     // Copy contract
     const copyBtn=document.getElementById('copyBtn');
@@ -321,6 +342,43 @@ LP Tokens Burned & Contract Ownership Renounced</br>
         }
       });
     });
+
+    // Snowflakes using placeholder image
+    function createSnowflakes(count = 30){
+      const layer = document.getElementById('snow-layer');
+      if(!layer) return;
+      const src = 'https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/2744.svg';
+      const vw = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+      for(let i=0;i<count;i++){
+        const left = Math.random()*vw;
+        const duration = 20 + Math.random()*20; // 20s - 40s (slower fall)
+        const driftDur = 8 + Math.random()*6; // 8s - 14s
+        const delay = -Math.random()*duration; // start mid-fall
+        const driftDelay = -Math.random()*driftDur; // start mid-drift
+        const size = 12 + Math.random()*18; // 12px - 30px
+
+        const wrap = document.createElement('div');
+        wrap.className = 'flake-wrap';
+        wrap.style.left = left + 'px';
+        wrap.style.animation = `fall ${duration}s linear ${delay}s infinite`;
+
+        const f = document.createElement('img');
+        f.className = 'flake';
+        f.src = src;
+        f.style.width = size + 'px';
+        f.style.height = size + 'px';
+        f.style.animation = `drift ${driftDur}s ease-in-out ${driftDelay}s infinite alternate`;
+
+        wrap.appendChild(f);
+        layer.appendChild(wrap);
+      }
+    }
+
+    if(document.readyState === 'loading'){
+      document.addEventListener('DOMContentLoaded', ()=> createSnowflakes(40));
+    }else{
+      createSnowflakes(40);
+    }
   </script>
 </body>
 </html>
